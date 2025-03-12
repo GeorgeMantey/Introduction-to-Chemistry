@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior High School Elective Chemistry - Year 1, Section 1</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .tab-container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .tab-buttons {
+            display: flex;
+            background-color: #3498db;
+        }
+        .tab-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .tab-button:hover {
+            background-color: #2980b9;
+        }
+        .tab-button.active {
+            background-color: #2980b9;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .quiz-container, .dictionary-container {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+        }
+        .formula {
+            background-color: #e8f6f3;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .project {
+            background-color: #fdebd0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .review-link {
+            cursor: pointer;
+            color: #3498db;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Senior High School Elective Chemistry - Year 1</h1>
+    <h2>Section 1: Introduction to Chemistry</h2>
+
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(event, 'content')">Content</button>
+            <button class="tab-button" onclick="openTab(event, 'workSolutions')">Work Solutions</button>
+            <button class="tab-button" onclick="openTab(event, 'quiz')">Quiz</button>
+            <button class="tab-button" onclick="openTab(event, 'laboratory')">Laboratory</button>
+            <button class="tab-button" onclick="openTab(event, 'resources')">Resources</button>
+            <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
+            <button class="tab-button" onclick="openTab(event, 'dictionary')">Dictionary</button>
+        </div>
+
+        <div id="content" class="tab-content active">
+            <h3>Unit 1: Chemistry as a Discipline</h3>
+            <p id="content-1-1">Chemistry is the scientific study of matter, its properties, and how it interacts with other substances. It plays a crucial role in our daily lives and is fundamental to understanding the world around us.</p>
+            <h4>1.1 Definition and Scope of Chemistry</h4>
+            <p id="content-1-2">Chemistry encompasses the study of elements, compounds, and the reactions between them. It investigates the composition, structure, properties, and changes of matter at the atomic and molecular level.</p>
+            <h4>1.2 Branches of Chemistry</h4>
+            <ul id="content-1-3">
+                <li><strong>Organic Chemistry:</strong> Study of carbon-containing compounds</li>
+                <li><strong>Inorganic Chemistry:</strong> Study of non-carbon-containing compounds</li>
+                <li><strong>Physical Chemistry:</strong> Study of the physical properties of chemical systems</li>
+                <li><strong>Analytical Chemistry:</strong> Study of the composition of substances</li>
+                <li><strong>Biochemistry:</strong> Study of chemical processes in living organisms</li>
+            </ul>
+            <h4>1.3 Importance of Chemistry in Daily Life</h4>
+            <p id="content-1-4">Chemistry impacts various aspects of our lives, including:</p>
+            <ul>
+                <li>Medicine and healthcare</li>
+                <li>Food and agriculture</li>
+                <li>Environmental science</li>
+                <li>Materials science and technology</li>
+                <li>Energy production and storage</li>
+            </ul>
+
+            <h3>Unit 2: Measurement of Physical Quantities</h3>
+            <h4>2.1 SI Units and Fundamental Quantities</h4>
+            <p id="content-2-1">The International System of Units (SI) provides a standardized system for measurement. Fundamental quantities include:</p>
+            <ul>
+                <li>Length (meter, m)</li>
+                <li>Mass (kilogram, kg)</li>
+                <li>Time (second, s)</li>
+                <li>Temperature (Kelvin, K)</li>
+                <li>Amount of substance (mole, mol)</li>
+                <li>Electric current (ampere, A)</li>
+                <li>Luminous intensity (candela, cd)</li>
+            </ul>
+            <h4>2.2 Derived Units</h4>
+            <p id="content-2-2">Derived units are formed by combining fundamental units. Examples include:</p>
+            <ul>
+                <li>Velocity (m/s)</li>
+                <li>Acceleration (m/s²)</li>
+                <li>Force (Newton, N = kg·m/s²)</li>
+                <li>Energy (Joule, J = N·m)</li>
+                <li>Pressure (Pascal, Pa = N/m²)</li>
+            </ul>
+            <h4>2.3 Significant Figures and Scientific Notation</h4>
+            <p id="content-2-3">Significant figures represent the precision of a measurement. Scientific notation is used to express very large or very small numbers concisely.</p>
+
+            <h3>Unit 3: Basic Safety Laboratory Practices</h3>
+            <h4>3.1 General Laboratory Safety Rules</h4>
+            <ul id="content-3-1">
+                <li>Wear appropriate personal protective equipment (PPE)</li>
+                <li>Never eat, drink, or smoke in the laboratory</li>
+                <li>Know the location of safety equipment (fire extinguishers, eyewash stations, etc.)</li>
+                <li>Report all accidents immediately</li>
+            </ul>
+            <h4>3.2 Handling Chemicals</h4>
+            <ul id="content-3-2">
+                <li>Read and understand Safety Data Sheets (SDS) before handling chemicals</li>
+                <li>Use proper techniques for transferring chemicals</li>
+                <li>Dispose of chemicals properly according to regulations</li>
+            </ul>
+            <h4>3.3 Laboratory Equipment Safety</h4>
+            <ul id="content-3-3">
+                <li>Proper use and handling of glassware</li>
+                <li>Safe operation of Bunsen burners and heating devices</li>
+                <li>Correct use of fume hoods for handling volatile substances</li>
+            </ul>
+        </div>
+
+        <div id="workSolutions" class="tab-content">
+            <h3>Work Solutions</h3>
+            <div class="formula">
+                <h4>Formula: Density = Mass / Volume</h4>
+                <p>Example questions and solutions:</p>
+                <ol>
+                    <li>
+                        <p><strong>Question:</strong> A cube of metal has a mass of 54 grams and a volume of 6 cm³. Calculate its density.</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given:</p>
+                        <ul>
+                            <li>Mass (m) = 54 g</li>
+                            <li>Volume (V) = 6 cm³</li>
+                        </ul>
+                        <p>Using the formula: Density = Mass / Volume</p>
+                        <p>Density = 54 g / 6 cm³ = 9 g/cm³</p>
+                    </li>
+                    <li>
+                        <p><strong>Question:</strong> A liquid has a density of 0.8 g/mL. What is the mass of 250 mL of this liquid?</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given:</p>
+                        <ul>
+                            <li>Density (ρ) = 0.8 g/mL</li>
+                            <li>Volume (V) = 250 mL</li>
+                        </ul>
+                        <p>Rearranging the formula: Mass = Density × Volume</p>
+                        <p>Mass = 0.8 g/mL × 250 mL = 200 g</p>
+                    </li>
+                    <li>
+                        <p><strong>Question:</strong> A piece of wood has a mass of 25 g and a density of 0.5 g/cm³. What is its volume?</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given:</p>
+                        <ul>
+                            <li>Mass (m) = 25 g</li>
+                            <li>Density (ρ) = 0.5 g/cm³</li>
+                        </ul>
+                        <p>Rearranging the formula: Volume = Mass / Density</p>
+                        <p>Volume = 25 g / 0.5 g/cm³ = 50 cm³</p>
+                    </li>
+                    <li>
+                        <p><strong>Question:</strong> An object has a mass of 150 g and a volume of 30 cm³. Is it more or less dense than water (density of water = 1 g/cm³)?</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given:</p>
+                        <ul>
+                            <li>Mass (m) = 150 g</li>
+                            <li>Volume (V) = 30 cm³</li>
+                        </ul>
+                        <p>Calculate the density: Density = Mass / Volume</p>
+                        <p>Density = 150 g / 30 cm³ = 5 g/cm³</p>
+                        <p>Since 5 g/cm³ is greater than 1 g/cm³, the object is more dense than water.</p>
+                    </li>
+                    <li>
+                        <p><strong>Question:</strong> A gas has a density of 1.25 kg/m³ at room temperature. What is its density in g/L?</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given:</p>
+                        <ul>
+                            <li>Density = 1.25 kg/m³</li>
+                        </ul>
+                        <p>Convert kg/m³ to g/L:</p>
+                        <p>1 kg = 1000 g</p>
+                        <p>1 m³ = 1000 L</p>
+                        <p>1.25 kg/m³ = (1.25 × 1000 g) / 1000 L = 1.25 g/L</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="quiz" class="tab-content">
+            <h3>Quiz</h3>
+            <div class="quiz-container">
+                <h4>Multiple Choice Questions</h4>
+                <div id="mcq-container"></div>
+                <button onclick="checkAnswers()">Submit Answers</button>
+                <div id="mcq-result"></div>
+
+                <h4>Standard Questions</h4>
+                <ol>
+                    <li>Define chemistry and explain its scope.</li>
+                    <li>List and briefly describe the main branches of chemistry.</li>
+                    <li>Explain the importance of chemistry in daily life, giving specific examples.</li>
+                    <li>What are the seven fundamental SI units? List them with their symbols.</li>
+                    <li>Explain the concept of derived units and give three examples.</li>
+                    <li>What are significant figures, and why are they important in scientific measurements?</li>
+                    <li>Describe the proper use of scientific notation.</li>
+                    <li>List five general laboratory safety rules.</li>
+                    <li>Explain the importance of Safety Data Sheets (SDS) in a chemistry laboratory.</li>
+                    <li>Describe the correct procedure for disposing of chemical waste in a laboratory setting.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="laboratory" class="tab-content">
+            <h3>Laboratory</h3>
+            <p>For this section, we recommend using PhET Interactive Simulations to explore chemistry concepts. Here are some relevant simulations:</p>
+            <ul>
+                <li><a href="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_en.html" target="_self">Build an Atom</a>: Explore the structure of atoms and how they relate to the periodic table.</li>
+                <li><a href="https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_en.html" target="_self">States of Matter: Basics</a>: Investigate different states of matter and phase changes.</li>
+                <li><a href="https://phet.colorado.edu/sims/html/molecule-shapes/latest/molecule-shapes_en.html" target="_self">Molecule Shapes</a>: Learn about molecular geometry and bond angles.</li>
+            </ul>
+            <p>These interactive simulations will help you visualize and understand fundamental chemistry concepts covered in this section.</p>
+        </div>
+
+        <div id="resources" class="tab-content">
+            <h3>Resources</h3>
+            <h4>Videos</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=FSyAehMdpyI" target="_self">Introduction to Chemistry - Crash Course Chemistry #1</a></li>
+                <li><a  href="https://www.youtube.com/watch?v=KWAsz59F8gA" target="_self">The Periodic Table: Crash Course Chemistry #4</a></li>
+                <li><a href="https://www.youtube.com/watch?v=hQpQ0hxVNTg" target="_self">Measurement and Units: Crash Course Chemistry #2</a></li>
+            </ul>
+            <h4>Online Resources</h4>
+            <ul>
+                <li><a href="https://chem.libretexts.org/" target="_self">Chemistry LibreTexts</a>: A comprehensive online chemistry textbook</li>
+                <li><a href="https://www.acs.org/content/acs/en/education/students/highschool.html" target="_self">American Chemical Society - High School Chemistry</a>: Resources for high school chemistry students</li>
+                <li><a href="https://www.rsc.org/resources-tools/" target="_self">Royal Society of Chemistry - Resources and Tools</a>: Various chemistry resources and tools</li>
+            </ul>
+            <h4>PDF Resources</h4>
+            <ul>
+                <li><a href="https://www.chem.tamu.edu/class/fyp/mathrev/mr-sigfig.pdf" target="_self">Significant Figures Rules</a>: A comprehensive guide to significant figures</li>
+                <li><a href="https://www.chem.purdue.edu/chemsafety/SafetyClass/SafetyRules.pdf" target="_self">Laboratory Safety Rules</a>: Basic safety rules for chemistry laboratories</li>
+            </ul>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h3>Projects</h3>
+            <div class="project">
+                <h4>Project 1: Density Column</h4>
+                <h5>Materials Needed:</h5>
+                <ul>
+                    <li>Tall, clear glass or plastic container</li>
+                    <li>Honey</li>
+                    <li>Dish soap</li>
+                    <li>Water</li>
+                    <li>Vegetable oil</li>
+                    <li>Rubbing alcohol</li>
+                    <li>Food coloring (optional)</li>
+                    <li>Small objects of different materials (e.g., grape, cherry tomato, ping pong ball, metal nut)</li>
+                </ul>
+                <h5>Steps:</h5>
+                <ol>
+                    <li>Pour honey into the container, filling about 1/5 of its height.</li>
+                    <li>Slowly pour dish soap down the side of the container, creating a second layer.</li>
+                    <li>Mix water with food coloring (if using) and carefully pour it down the side of the container to form the third layer.</li>
+                    <li>Slowly pour vegetable oil to create the fourth layer.</li>
+                    <li>Finally, pour rubbing alcohol to form the top layer.</li>
+                    <li>Observe the distinct layers formed due to differences in density.</li>
+                    <li>Gently drop the small objects into the column and observe where they settle.</li>
+                </ol>
+                <p>This project demonstrates the concept of density and how different liquids and solids interact based on their densities.</p>
+            </div>
+            <div class="project">
+                <h4>Project 2: Creating a Simple Spectroscope</h4>
+                <h5>Materials Needed:</h5>
+                <ul>
+                    <li>Empty paper towel roll or a small cardboard box</li>
+                    <li>CD or DVD (old, unusable one)</li>
+                    <li>Scissors</li>
+                    <li>Tape</li>
+                    <li>Black paper</li>
+                    <li>Various light sources (e.g., incandescent bulb, fluorescent light, LED)</li>
+                </ul>
+                <h5>Steps:</h5>
+                <ol>
+                    <li>Cut a small slit (about 1 cm wide) at one end of the paper towel roll or make a small hole in one side of the box.</li>
+                    <li>On the opposite end, cut a larger opening (about 3 cm x 3 cm).</li>
+                    <li>Cut a small piece of the CD or DVD (about 2 cm x 2 cm) that includes part of the reflective surface.</li>
+                    <li>Tape this piece over the larger opening, with the reflective side facing inward.</li>
+                    <li>Cover any remaining openings with black paper to block external light.</li>
+                    <li>Point the slit end towards different light sources and look through the CD/DVD piece to observe the spectrum.</li>
+                </ol>
+                <p>This project introduces students to the concept of light spectra and how different light sources produce different spectral patterns.</p>
+            </div>
+        </div>
+
+        <div id="dictionary" class="tab-content">
+            <h3>Dictionary</h3>
+            <input type="text" id="searchInput" placeholder="Search for a term...">
+            <div id="dictionaryContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for tab functionality and interactivity
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Multiple Choice Questions
+        const mcqQuestions = [
+            {
+                question: "Which of the following is NOT a branch of chemistry?",
+                options: ["Organic Chemistry", "Inorganic Chemistry", "Physical Chemistry", "Mechanical Chemistry"],
+                correctAnswer: 3,
+                contentRef: "content-1-3"
+            },
+            {
+                question: "What is the SI unit for temperature?",
+                options: ["Celsius", "Fahrenheit", "Kelvin", "Rankine"],
+                correctAnswer: 2,
+                contentRef: "content-2-1"
+            },
+            {
+                question: "Which of the following is a derived unit?",
+                options: ["Meter", "Kilogram", "Second", "Newton"],
+                correctAnswer: 3,
+                contentRef: "content-2-2"
+            },
+            {
+                question: "What does SDS stand for in laboratory safety?",
+                options: ["Safety Data Sheet", "Standard Danger Sign", "Secure Disposal System", "Scientific Data Summary"],
+                correctAnswer: 0,
+                contentRef: "content-3-2"
+            },
+            {
+                question: "Which of the following is NOT a fundamental SI unit?",
+                options: ["Meter", "Kilogram", "Second", "Liter"],
+                correctAnswer: 3,
+                contentRef: "content-2-1"
+            },
+            {
+                question: "What is the correct formula for density?",
+                options: ["Density = Mass × Volume", "Density = Mass + Volume", "Density = Mass / Volume", "Density = Volume / Mass"],
+                correctAnswer: 2,
+                contentRef: "content-2-2"
+            },
+            {
+                question: "Which of the following is NOT a state of matter?",
+                options: ["Solid", "Liquid", "Gas", "Energy"],
+                correctAnswer: 3,
+                contentRef: "content-1-2"
+            },
+            {
+                question: "What is the main purpose of a fume hood in a chemistry laboratory?",
+                options: ["To keep chemicals cool", "To store glassware", "To remove harmful vapors", "To mix chemicals"],
+                correctAnswer: 2,
+                contentRef: "content-3-3"
+            },
+            {
+                question: "Which of the following is an example of a physical change?",
+                options: ["Rusting of iron", "Burning of paper", "Melting of ice", "Digestion of food"],
+                correctAnswer: 2,
+                contentRef: "content-1-2"
+            },
+            {
+                question: "What is the atomic number of an element equal to?",
+                options: ["Number of protons", "Number of neutrons", "Number of electrons", "Sum of protons and neutrons"],
+                correctAnswer: 0,
+                contentRef: "content-1-2"
+            }
+        ];
+
+        function displayMCQ() {
+            const mcqContainer = document.getElementById("mcq-container");
+            mcqQuestions.forEach((q, index) => {
+                const questionDiv = document.createElement("div");
+                questionDiv.innerHTML = `
+                    <p><strong>${index + 1}. ${q.question}</strong></p>
+                    ${q.options.map((option, i) => `
+                        <label>
+                            <input type="radio" name="q${index}" value="${i}">
+                            ${option}
+                        </label><br>
+                    `).join("")}
+                `;
+                mcqContainer.appendChild(questionDiv);
+            });
+        }
+
+        function checkAnswers() {
+            let score = 0;
+            const resultDiv = document.getElementById("mcq-result");
+            resultDiv.innerHTML = "";
+
+            mcqQuestions.forEach((q, index) => {
+                const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
+                const questionResult = document.createElement("p");
+                if (selectedAnswer) {
+                    if (parseInt(selectedAnswer.value) === q.correctAnswer) {
+                        score++;
+                        questionResult.innerHTML = `Question ${index + 1}: <span class="correct">Correct</span>`;
+                    } else {
+                        questionResult.innerHTML = `Question ${index + 1}: <span class="incorrect">Incorrect</span>. 
+                        <span class="review-link" onclick="reviewContent('${q.contentRef}')">Review this topic</span>`;
+                    }
+                } else {
+                    questionResult.innerHTML = `Question ${index + 1}: <span class="incorrect">Not answered</span>`;
+                }
+                resultDiv.appendChild(questionResult);
+            });
+
+            const percentage = (score / mcqQuestions.length) * 100;
+            const scoreMessage = document.createElement("p");
+            scoreMessage.innerHTML = `You scored ${score} out of ${mcqQuestions.length} (${percentage.toFixed(2)}%)`;
+            resultDiv.insertBefore(scoreMessage, resultDiv.firstChild);
+
+            if (percentage >= 70) {
+                scoreMessage.innerHTML += "<br>Congratulations! You have qualified for the final examination and certification.";
+            } else {
+                scoreMessage.innerHTML += "<br>You need to score at least 70% to qualify for the final examination and certification. Please review the material and try again.";
+            }
+        }
+
+        function reviewContent(contentRef) {
+            openTab(event, 'content');
+            const contentElement = document.getElementById(contentRef);
+            contentElement.scrollIntoView({ behavior: 'smooth' });
+            contentElement.style.backgroundColor = '#ffffcc';
+            setTimeout(() => {
+                contentElement.style.backgroundColor = '';
+            }, 5000);
+        }
+
+        // Dictionary functionality
+        const dictionary = {
+            "Chemistry": "The scientific study of the composition, structure, properties, and reactions of matter.",
+            "Element": "A pure substance consisting of only one type of atom.",
+            "Compound": "A substance formed when two or more elements are chemically joined.",
+            "Molecule": "The smallest unit of a chemical compound that retains the properties of that compound.",
+            "Atom": "The basic unit of matter, consisting of a dense nucleus surrounded by electrons.",
+            "Proton": "A positively charged subatomic particle found in the nucleus of an atom.",
+            "Neutron": "A subatomic particle with no net electric charge, found in the nucleus of an atom.",
+            "Electron": "A negatively charged subatomic particle that orbits the nucleus of an atom.",
+            "Periodic Table": "A tabular arrangement of chemical elements, organized based on their atomic number and chemical properties.",
+            "Chemical Reaction": "A process in which one or more substances are converted into one or more different substances.",
+            "pH": "A measure of the acidity or basicity of an aqueous solution.",
+            "Acid": "A substance that donates protons (H+ ions) in a chemical reaction.",
+            "Base": "A substance that accepts protons (H+ ions) in a chemical reaction.",
+            "Mole": "The SI unit for the amount of substance, equal to 6.022 × 10^23 elementary entities.",
+            "Density": "The mass of a substance per unit volume.",
+            "Solution": "A homogeneous mixture of two or more substances.",
+            "Catalyst": "A substance that increases the rate of a chemical reaction without being consumed in the process.",
+            "Isotope": "Atoms of the same element with the same number of protons but different numbers of neutrons.",
+            "Valence Electron": "An electron in the outermost shell of an atom that can participate in forming chemical bonds.",
+            "Oxidation": "The loss of electrons by a molecule, atom, or ion.",
+            "Reduction": "The gain of electrons by a molecule, atom, or ion.",
+            "Stoichiometry": "The calculation of relative quantities of reactants and products in chemical reactions.",
+            "Equilibrium": "The state in which the forward and reverse reactions occur at the same rate, resulting in no net change in concentrations.",
+            "Enthalpy": "A measure of the total heat content of a system.",
+            "Entropy": "A measure of the disorder or randomness in a system.",
+            "Polymer": "A large molecule composed of many repeated subunits.",
+            "Electronegativity": "The tendency of an atom to attract electrons in a chemical bond.",
+            "Titration": "A technique where a solution of known concentration is used to determine the concentration of an unknown solution.",
+            "Spectroscopy": "The study of the interaction between matter and electromagnetic radiation.",
+            "Chromatography": "A technique used to separate mixtures into their component parts."
+        };
+
+        function populateDictionary() {
+            const dictionaryContent = document.getElementById("dictionaryContent");
+            for (const [term, definition] of Object.entries(dictionary)) {
+                const entryDiv = document.createElement("div");
+                entryDiv.innerHTML = `<strong>${term}:</strong> ${definition}<br><br>`;
+                dictionaryContent.appendChild(entryDiv);
+            }
+        }
+
+        function searchDictionary() {
+            const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            const dictionaryContent = document.getElementById("dictionaryContent");
+            dictionaryContent.innerHTML = "";
+            for (const [term, definition] of Object.entries(dictionary)) {
+                if (term.toLowerCase().includes(searchTerm) || definition.toLowerCase().includes(searchTerm)) {
+                    const entryDiv = document.createElement("div");
+                    entryDiv.innerHTML = `<strong>${term}:</strong> ${definition}<br><br>`;
+                    dictionaryContent.appendChild(entryDiv);
+                }
+            }
+        }
+
+        // Initialize the page
+        displayMCQ();
+        populateDictionary();
+        document.getElementById("searchInput").addEventListener("input", searchDictionary);
+    </script>
+</body>
+</html>
